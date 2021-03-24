@@ -21,7 +21,6 @@ public class Grades {
         while (i <= this.size) {
             System.out.println(i);
         }
-        return;
     }
 
     private int sumGrades(int[] grades) {
@@ -32,16 +31,12 @@ public class Grades {
         return result;
     }
 
-    public int getAverage(int[] average) {
-        int average = 0;
+    public double getAverage(int[] average) {
         int sum = 0;
-        for (int n = 0; n < this.grades[this.size]; n++) {
-            sum += this.grades[n];
+        for (int n = 0; n <= average.length; n++) {
+            sum += average[n];
         }
-
-        average = sum / this.size;
-        return average;
+        return sum / average.length;
     }
 }
-
 
