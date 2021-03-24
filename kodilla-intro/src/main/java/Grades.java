@@ -38,7 +38,6 @@ public class Grades {
         for (int n = 0; n < this.grades[this.size]; n++) {
             sum += this.grades[n];
         }
-        return sum;
 
         average = sum / this.size;
         return average;
