@@ -11,7 +11,7 @@ public class Application {
         this.height = height;
     }
 
-    public int checkAgeAndHeight() {
+    public void checkAgeAndHeight() {
 
         if (name != null) {
             if (age > 30 && height > 160) {
@@ -20,6 +20,5 @@ public class Application {
                 System.out.println("User is 30 (or younger) or 160cm (or shorter)");
             }
         }
-        return 0;
     }
 }
