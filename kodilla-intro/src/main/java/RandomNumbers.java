@@ -26,6 +26,4 @@ public class RandomNumbers {
 
         return maxNumber;
     }
-
-
 }
