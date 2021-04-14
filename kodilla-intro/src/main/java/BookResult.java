@@ -1,8 +1,9 @@
 public class BookResult {
     public static void main(String[] args) {
-        String book = Book.getTitle() + " by " + Book.getAuthor();
-        System.out.println("Your book is: " + book);
 
+        Book book = Book.of("Sharp objects", "Gillian Flynn");
+        System.out.println(book.getAuthor());
+        System.out.println(book.getTitle());
 
     }
 }

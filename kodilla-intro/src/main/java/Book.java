@@ -1,29 +1,23 @@
-import java.util.Scanner;
-
 public class Book {
 
-    public static String getAuthor() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Enter author name:");
-            String author = scanner.nextLine().trim();
-            if (author.length() >= 2) {
-                return author;
-            }
-            System.out.println("Author name is too short. Try again.");
-        }
+    private String author;
+    private String title;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
     }
 
-    public static String getTitle() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Enter title:");
-            String title = scanner.nextLine().trim();
-            if (title.length() >= 1) {
-                return title;
-            }
-            System.out.println("Title is too short. Try again.");
-        }
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public static Book of(String title, String author) {
+        return new Book(title, author);
     }
 
 }
