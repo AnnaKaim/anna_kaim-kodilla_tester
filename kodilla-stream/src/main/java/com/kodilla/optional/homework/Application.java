@@ -14,15 +14,14 @@ public class Application {
         students.add(new Student("Monika Belucci", new Teacher("Patrick Swayze")));
         students.add(new Student("Sandra Bullock", new Teacher("Uma Turmann")));
 
-        Optional<Teacher> optionalTeacher = Optional.ofNullable(null);
-
-
-        for (Student student : students) {
-            if (optionalTeacher != null) {
-                System.out.println("Student: " + student.getName() + ", teacher: " + student.getTeacher() + ".");
-            } else if (optionalTeacher == null){
-                System.out.println(" <undefined>");
-            }
+        for (Student student: students) {
+            Teacher teacherName =
+                    Optional.ofNullable(student.getTeacher()).orElse(new Teacher("<undefined>"));
+            System.out.println("Student: " + student.getName() + ", teacher: " + teacherName.getName() + ".");
         }
+    }
+
+    public static String getDefaultTeacherName() {
+        return "<undefined>";
     }
 }
