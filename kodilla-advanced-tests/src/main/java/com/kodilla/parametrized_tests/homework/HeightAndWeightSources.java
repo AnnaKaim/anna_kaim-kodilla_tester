@@ -7,8 +7,6 @@ import org.junit.jupiter.params.provider.Arguments;
 
 public class HeightAndWeightSources {
 
-    private List<Person> people = new ArrayList<>();
-
     static Stream<Arguments> provideHeightAndWeightForTestingBMI() {
         return Stream.of(
                 Arguments.of(1.67, 59.3),
